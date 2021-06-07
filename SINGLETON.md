@@ -41,7 +41,7 @@ public static存取instance
         private string _ConnectStr;
 
         private MSSQLHelper()
-        {
+        {            
             _ConnectStr = ConfigurationManager.AppSettings.Get("MSSQL_CONNECTSTR");
         }
 
@@ -52,20 +52,25 @@ public static存取instance
                 return instance;
             }
         }       
-
     }
     
     class Program
     {
         static async Task Main(string[] args)
         {
-
-            var serviceProvider = new ServiceCollection()
-                    .AddSingleton<IDBHelper, MSSQLHelper>()
-                    .BuildServiceProvider();
                     
-            var mssql = serviceProvider.GetService<MSSQLHelper>();
+            var serviceProvider = new ServiceCollection()
+            .AddSingleton(FileWriter.Instance)
+            .AddSingleton(MSSQLHelper.Instance)
+            .BuildServiceProvider();            
+
+            var FileWrite = serviceProvider.GetService<FileWriter>();
+            var MSSQL = serviceProvider.GetService<MSSQLHelper>();
             
-            mssql.function_name();
+             Task.Run(async () =>
+            {
+                await FileWrite.WriteAsync(CombineTipData, probc.ProbcName, DateTime.Today.ToString(), MSSQL);               
+
+            }).Wait();
         }
     }
