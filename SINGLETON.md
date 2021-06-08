@@ -1,67 +1,31 @@
 # 單例模式(Singleton)
 from https://espressocoder.com/2019/01/03/implementing-the-singleton-pattern-in-asp-net-core/
-
-## 經典做法
-
-使用private staic readonly宣告 instance
-建構式宣告成private,避免外部類別宣告
-public static存取instance
-
-    public class MSSQLHelper
-    {
-
-        private static readonly MSSQLHelper instance = new MSSQLHelper();
-        private string _ConnectStr;
-
-        private MSSQLHelper()
-        {
-            _ConnectStr = ConfigurationManager.AppSettings.Get("MSSQL_CONNECTSTR");
-        }
-
-        public static MSSQLHelper Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
-    }
+from https://dotnetcoretutorials.com/2019/06/11/singleton-pattern-in-net-core/
 
 ## Asp.net Core作法
-    public interface IDBHelper
-    {
-        private static IDBHelper Instance { get; }
-       
-    }
 
-    public class MSSQLHelper : IDBHelper
+   public class MSSQLHelper 
     {
 
-        private static readonly MSSQLHelper instance = new MSSQLHelper();
+        private static readonly MSSQLHelper instance=new MSSQLHelper();
         private string _ConnectStr;
 
-        private MSSQLHelper()
+        public MSSQLHelper()
         {            
             _ConnectStr = ConfigurationManager.AppSettings.Get("MSSQL_CONNECTSTR");
         }
 
-        public static MSSQLHelper Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }       
+        public static MSSQLHelper GetInstance() => instance;
+        
     }
     
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
-                    
-            var serviceProvider = new ServiceCollection()
-            .AddSingleton(FileWriter.Instance)
-            .AddSingleton(MSSQLHelper.Instance)
+            var serviceProvider = new ServiceCollection()            
+            .AddSingleton<MSSQLHelper>()
+            .AddSingleton<FileWriter>()
             .BuildServiceProvider();            
 
             var FileWrite = serviceProvider.GetService<FileWriter>();
