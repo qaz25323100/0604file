@@ -4,7 +4,7 @@ from https://dotnetcoretutorials.com/2019/06/11/singleton-pattern-in-net-core/
 
 ## Asp.net Core作法
 
-   public class MSSQLHelper 
+    public class MSSQLHelper 
     {
 
         private static readonly MSSQLHelper instance=new MSSQLHelper();
