@@ -3,8 +3,12 @@ from https://espressocoder.com/2019/01/03/implementing-the-singleton-pattern-in-
 from https://dotnetcoretutorials.com/2019/06/11/singleton-pattern-in-net-core/
 
 ## Asp.net Core作法
-
-    public class MSSQLHelper 
+    public interface IDBHelper
+    {
+        
+        
+    }
+    public class MSSQLHelper:IDBHelper
     {
 
         private static readonly MSSQLHelper instance=new MSSQLHelper();
@@ -24,7 +28,7 @@ from https://dotnetcoretutorials.com/2019/06/11/singleton-pattern-in-net-core/
         static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()            
-            .AddSingleton<MSSQLHelper>()
+            .AddSingleton<IDBHelper,MSSQLHelper>()
             .AddSingleton<FileWriter>()
             .BuildServiceProvider();            
 
