@@ -32,7 +32,8 @@
   
   
 ## Hex to Bin  
-  Method 1.  StreamReader & Buffer 
+  Method 1.  StreamReader & Buffer  
+  
      try
             {
                 string[] all_path_2 = Directory.GetFiles(@"\\10.92.129.40\217_backup\\20210412_ascii\data2");
