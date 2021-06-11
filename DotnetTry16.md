@@ -35,9 +35,9 @@
   Method 1.  StreamReader & Buffer  
   
      try
-            {
-                string[] all_path_2 = Directory.GetFiles(@"\\10.92.129.40\217_backup\\20210412_ascii\data2");
-                for (int path_i = 0; path_i < all_path_2.Length; path_i++)
+     {
+            string[] all_path_2 = Directory.GetFiles(@"\\10.92.129.40\217_backup\\20210412_ascii\data2");
+            for (int path_i = 0; path_i < all_path_2.Length; path_i++)
                 {
                     FileStream fs = new FileStream(all_path_2[path_i].Replace("data2", "data2_output").Replace(".txt", ""), FileMode.Create, FileAccess.ReadWrite);
 
@@ -50,14 +50,14 @@
                     fs.Close();
                 }
             }
-      catch (Exception ex)
-      {
-                Console.WriteLine(ex.Message);
-       }
+     catch (Exception ex)
+     {
+             Console.WriteLine(ex.Message);
+     }
        
        
-       public static void WriteHexStringToFile(StreamReader reader, FileStream fs)
-        {
+     public static void WriteHexStringToFile(StreamReader reader, FileStream fs)
+     {
 
             var twoCharacterBuffer = new StringBuilder();
             var oneByte = new byte[1];
@@ -79,4 +79,4 @@
                 Tchar++;
             }
 
-        }
+      }
