@@ -1,5 +1,43 @@
 # 依賴注入(Dependency Injection)
 
+## 生命週期
+
+  注入主要有三種模式AddTransient()、 AddScoped()、 AddSingleton()，根據使用的方法而有所不同，
+  其底下為三種生命週期上的差異：
+  
+    var services = new ServiceCollection()
+                 .AddTransient<IFoo, Foo>()
+                 .AddScoped<IBar, Bar>()
+                 .AddSingleton<IBaz, Baz>()
+                 .BuildServiceProvider();
+            
+            var provider1 = services.CreateScope().ServiceProvider;
+            var provider2 = services.CreateScope().ServiceProvider;
+
+
+            GetService<IFoo>(provider1);
+            GetService<IBar>(provider1);
+            GetService<IBaz>(provider1);
+            Console.WriteLine();
+            GetService<IFoo>(provider2);
+            GetService<IBar>(provider2);
+            GetService<IBaz>(provider2);
+            
+            static void GetService<T>(IServiceProvider provider){
+                provider.GetService<T>(); //Use two GetService cause AddTransient
+                provider.GetService<T>();
+            }
+  
+  輸出結果如下
+  
+    An Instance of Foo is created.
+    An Instance of Foo is created.
+    An Instance of Bar is created.
+    An Instance of Baz is created.
+  
+    An Instance of Foo is created.
+    An Instance of Foo is created.
+    An Instance of Bar is created.
 
 # 使用時機限制  
 
