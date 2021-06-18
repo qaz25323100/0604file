@@ -2,7 +2,7 @@
 
 ## 生命週期
 
-  注入主要有三種模式AddTransient()、 AddScoped()、 AddSingleton()，根據使用的方法而有所不同，
+  注入主要有三種生命週期：AddTransient()、 AddScoped()、 AddSingleton()，根據使用的方法而有所不同，
   其底下為三種生命週期上的差異：
   
     var services = new ServiceCollection()
