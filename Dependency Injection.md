@@ -13,6 +13,7 @@
             
     var provider1 = services.CreateScope().ServiceProvider;
     var provider2 = services.CreateScope().ServiceProvider;
+    
     GetService<IFoo>(provider1);
     GetService<IBar>(provider1);
     GetService<IBaz>(provider1);
