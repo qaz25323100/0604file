@@ -11,22 +11,20 @@
                  .AddSingleton<IBaz, Baz>()
                  .BuildServiceProvider();
             
-            var provider1 = services.CreateScope().ServiceProvider;
-            var provider2 = services.CreateScope().ServiceProvider;
-
-
-            GetService<IFoo>(provider1);
-            GetService<IBar>(provider1);
-            GetService<IBaz>(provider1);
-            Console.WriteLine();
-            GetService<IFoo>(provider2);
-            GetService<IBar>(provider2);
-            GetService<IBaz>(provider2);
+    var provider1 = services.CreateScope().ServiceProvider;
+    var provider2 = services.CreateScope().ServiceProvider;
+    GetService<IFoo>(provider1);
+    GetService<IBar>(provider1);
+    GetService<IBaz>(provider1);
+    Console.WriteLine();
+    GetService<IFoo>(provider2);
+    GetService<IBar>(provider2);
+    GetService<IBaz>(provider2);
             
-            static void GetService<T>(IServiceProvider provider){
-                provider.GetService<T>(); //Use two GetService cause AddTransient
-                provider.GetService<T>();
-            }
+    static void GetService<T>(IServiceProvider provider){
+        provider.GetService<T>(); //Use two GetService cause AddTransient
+        provider.GetService<T>();
+    }
   
   輸出結果如下
   
