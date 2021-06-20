@@ -9,8 +9,13 @@ MySQL 常用的兩個資料表引擎：MyISAM、InnoDB，(MyISAM 不支援交易
 3.  Isolation (隔離性)：多個交易可以獨立、同時執行，不會互相干擾。這一點跟後面會提到的「隔離層級」有關。
 4.  Durability (持久性)：交易完成後，異動結果須完整的保留。  
   
-開始進入交易模式  
+### 開始進入交易模式  
 SQL 指令：START TRANSACTION 或 BEGIN  
+  
+### 結束交易模式
+交易完成：使用 COMMIT 儲存所有變動，並結束交易。  
+交易過程異常：使用 ROLLBACK 回滾，取消交易，還原到未進行交易的狀態。(若交易過程連線中斷，沒 COMMIT 提交的變更，亦會如同執行 ROLLBACK 取消交易)  
+
 
 ## Awesome Mysql  
 https://github.com/shlomi-noach/awesome-mysql#gui
