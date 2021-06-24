@@ -22,15 +22,20 @@ int main(){
                 int x = (rand()% RANDOM_END)+ RANDOM_START;
                 o.write((char *)&x,sizeof(int));
         }
-        o.close();*/
+        o.close();*/        
 
         const char* FILENAM = "123.dat";
         ifstream i(FILENAM,ios::binary);
 
         int ch,max=-1,min=11112;
-        int sz = i.tellg(); // Get File size
-        printf("Bytes: %d\n",sz);
-        printf("Numbers: %ld\n",sz/sizeof(int)); // Numbers in File
+
+        streampos fsize = 0;
+        fsize = i.tellg();
+        i.seekg( 0, ios::end );
+        fsize = i.tellg() - fsize;
+        i.seekg( 0, ios::beg );
+        printf("Bytes: %d\n",fsize);
+        printf("Numbers: %ld\n",fsize/sizeof(int)); // Numbers in File
 
         while(1){
                 i.read((char*)&ch,sizeof(int));
