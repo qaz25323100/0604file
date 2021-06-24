@@ -1,42 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#define RANDOM_START 1
-#define RANDOM_END 11111
-int main()
-{  /*
-        int i=0,arr[26];
-        FILE *fp;
-        char *a;
-
-        fp = fopen("1110831022_C.dat","a");
-        srand( time(NULL));
-        for(i=0;i<26;i++)
-		{
-               
-                int x = (rand()% RANDOM_END)+ 1;
-                //fprintf(fp, "%d ",x);
-                arr[i]=x;
-                
-        }
-        fwrite(arr,sizeof(int),26,fp);
-*/
-      
-        FILE *fp;
-        fp =fopen("1110831022_C.dat","r");
-
-        int ch;
-
-        while(!feof(fp))
-		{
-                fread(&ch, sizeof(int), 1, fp);
-                printf("%d\n ",ch);
-        }
-        
-        fclose(fp);
- 
-        return 0;
-		
-        
-       
+#include<stdio.h> 
+#include<stdlib.h> 
+#include<time.h>
+FILE *fp;
+void main(void)
+{
+	int x[26]={0};
+	int i;
+	int n[i];
+	srand((unsigned) time (NULL));
+	for(i=1;i<=26;i++)
+	{
+		x[i]=rand()%11111+1;
+		printf("%d\n",x[i]);
+	}
+    
+    if((fp=fopen("1110831022.dat","ab"))==NULL)
+	{
+		printf("Error!\n");
+		exit(0);
+	}
+	i=fwrite(&x[i],sizeof(int),26,fp);
+	fclose(fp);
 }
