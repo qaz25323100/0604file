@@ -10,14 +10,25 @@ int main(){
 
         fp = fopen("random_text.dat","a");
 
-        /* 產生亂數 */
         for(int i=0;i<26;i++){
                 srand( time(NULL) + i);
                 int x = (rand()% RANDOM_END)+ 1;
                 //fprintf(fp, "%d ",x);
                 arr[i]=x;
-                fwrite(&arr[i],sizeof(int),1,fp);
         }
+        fwrite(arr,sizeof(int),26,fp);
+
+        /* Validate By fread
+        FILE *fp;
+        fp =fopen("random_text.dat","r");
+
+        int ch;
+
+        while(!feof(fp)) {
+                fread(&ch, sizeof(int), 1, fp);
+                printf("%d ",ch);
+        }
+        */
         fclose(fp);
 
         return 0;
