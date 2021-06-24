@@ -4,13 +4,12 @@
 #define RANDOM_START 1
 #define RANDOM_END 11111
 int main(){
+        /*
         int i=0,arr[26];
         FILE *fp;
         char *a;
 
-        //fp = fopen("random_text.dat","a");
-        fp = fopen("random_text.dat","r");
-        /*
+        fp = fopen("random_text.dat","a");
         for(int i=0;i<26;i++){
                 srand( time(NULL) + i);
                 int x = (rand()% RANDOM_END)+ 1;
@@ -19,6 +18,8 @@ int main(){
         }
         fwrite(arr,sizeof(int),26,fp);
         */
+        FILE *fp;
+        fp = fopen("random_text.dat","r");
         int ch,max=-1,min=11112;
         fseek(fp, 0L, SEEK_END);
         int sz = ftell(fp); // Get File size
