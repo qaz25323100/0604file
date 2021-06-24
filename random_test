@@ -26,8 +26,9 @@ int main(){
         printf("Numbers: %ld\n",sz/sizeof(int)); // Numbers in File
         fseek(fp, 0L, SEEK_SET);
 
-        while(!feof(fp)) {
+        while(1){
                 fread(&ch, sizeof(int), 1, fp);
+                if(feof(fp)) break;
                 if(ch>max) max =ch;
                 if(ch<min) min= ch;
                 printf("%d ",ch);
