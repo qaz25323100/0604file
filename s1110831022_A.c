@@ -27,11 +27,12 @@ int main()
 
         int ch;
 
-        while(!feof(fp))
-		{
+        while(1){
                 fread(&ch, sizeof(int), 1, fp);
-                printf("%d\n ",ch);
+                if(feof(fp)) break;
+                printf("%d ",ch);
         }
+
         
         fclose(fp);
  
