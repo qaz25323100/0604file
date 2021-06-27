@@ -1,5 +1,5 @@
-# .NET Framwork vs .Net core差異
-
+# .NET
+  
 ## .Net core
   
 2016年所提出，目的如下  
