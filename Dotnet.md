@@ -21,6 +21,16 @@
 並遵照.Net 5的命名規則命名下去，其後續版本為.Net 6、.Net 7 ..以此類推。
 且偶數號版本為長期支援版本。
 
+## 工具診斷
+  
+.Net版本每幾年就更新一次，語法在各版本上多少會有些許差異，因此可透過分析工具診斷專案  
+  
+.NET Portability Analyzer 簡稱API Port，可分析 .NET 專案或程式產生可攜性報告(Excel 檔)。  
+https://docs.microsoft.com/en-us/dotnet/standard/analyzers/portability-analyzer?WT.mc_id=DOP-MVP-37580  
+
+NuGet 套件，.NET API Analyzer，可提示過時的 API 並指示替代方案。
+
+
 ## 參考文獻
 .Net Core WIKI -  https://zh.wikipedia.org/wiki/.NET_Core  
 .net 框架 - https://www.easyatm.com.tw/wiki/.net%E6%A1%86%E6%9E%B6  
