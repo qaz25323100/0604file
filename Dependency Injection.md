@@ -4,6 +4,12 @@ https://blog.darkthread.net/blog/aspnet-core-di-notes/
 
 https://blog.darkthread.net/blog/aspnetcore-use-scoped-in-singleton/
 
+## Mongodb建議client使用單例  
+
+  https://github.com/nbarbettini/little-aspnetcore-book/issues/37
+  http://mongodb.github.io/mongo-csharp-driver/2.5/reference/driver/connecting/#re-use
+  
+
 ## 生命週期
 
   注入主要有三種生命週期：AddTransient()、 AddScoped()、 AddSingleton()，根據使用的方法而有所不同，
