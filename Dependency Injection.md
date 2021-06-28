@@ -1,5 +1,8 @@
 # 依賴注入(Dependency Injection)
 
+https://blog.darkthread.net/blog/aspnet-core-di-notes/  
+
+
 ## 生命週期
 
   注入主要有三種生命週期：AddTransient()、 AddScoped()、 AddSingleton()，根據使用的方法而有所不同，
