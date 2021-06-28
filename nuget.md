@@ -1,4 +1,4 @@
- 
+ System.Configuration
 
 Microsoft.NETCore.App.Runtime.win-x64  
 Microsoft.WindowsDesktop.App.Runtime.win-x64  
