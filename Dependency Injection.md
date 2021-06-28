@@ -2,6 +2,7 @@
 
 https://blog.darkthread.net/blog/aspnet-core-di-notes/  
 
+https://blog.darkthread.net/blog/aspnetcore-use-scoped-in-singleton/
 
 ## 生命週期
 
