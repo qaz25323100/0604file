@@ -1,3 +1,34 @@
+## mysql語法順序與執行順序  
+
+語法順序:
+
+1.  SELECT[DISTINCT]
+2.  FROM
+3.  WHERE
+4.  GROUP BY
+5.  HAVING
+6.  UNION
+7.  ORDER BY
+
+執行順序  
+
+1.  FROM
+2.  WHERE
+3.  GROUP BY
+4.  HAVING
+5.  SELECT
+6.  DISTINCT
+7.  UNION
+8.  ORDER BY
+
+
+
+原文網址：https://kknews.cc/news/zmvrbbp.html
+
+原文網址：https://kknews.cc/news/zmvrbbp.html
+
+
+
 ## Mysql Lock
   
 目的：協調多個程式存取資料的機制。
