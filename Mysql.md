@@ -22,9 +22,6 @@
 8.  ORDER BY
 
 
-
-原文網址：https://kknews.cc/news/zmvrbbp.html
-
 原文網址：https://kknews.cc/news/zmvrbbp.html
 
 
