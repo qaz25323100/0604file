@@ -37,6 +37,7 @@
   https://xyz.cinc.biz/2013/04/mysql-lock-tables.html
 
 ## Mysql交易功能Transaction  
+  https://xyz.cinc.biz/2013/05/mysql-transaction.html  
   
 MySQL 常用的兩個資料表引擎：MyISAM、InnoDB，(MyISAM 不支援交易功能)  
   
