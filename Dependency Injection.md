@@ -6,8 +6,9 @@ https://blog.darkthread.net/blog/aspnetcore-use-scoped-in-singleton/
 
 ## Mongodb建議client使用單例  
 
-  https://github.com/nbarbettini/little-aspnetcore-book/issues/37
-  http://mongodb.github.io/mongo-csharp-driver/2.5/reference/driver/connecting/#re-use
+https://github.com/nbarbettini/little-aspnetcore-book/issues/37  
+http://mongodb.github.io/mongo-csharp-driver/2.5/reference/driver/connecting/#re-use  
+
   
 
 ## 生命週期
