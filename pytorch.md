@@ -1,3 +1,7 @@
+## pytorch Dataset and DataLoader
+  
+https://www.cnblogs.com/dogecheng/p/11930535.html
+  
 ## 增加pytorch效能
   
 https://hackmd.io/@-CDCNK_qTUicXsissQsHMA/SJ6Gjpxv8#%E5%A6%82%E6%9E%9C%E7%94%A8%E5%88%B0-DataLoader-%E8%A8%98%E5%BE%97%E8%A8%AD-pin_memoryTrue  
