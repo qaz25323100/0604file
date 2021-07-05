@@ -2,28 +2,24 @@
   
      static void Main(string[] args)
      {
-                //string[] files = Directory.GetFiles("./pkg.zip");
-                string file = "./ubuntu1804-pytorch.tar";
-                string EncryptFileName = "./ubuntu1804-pytorch";
+                string[] files = Directory.GetFiles(@"C:\Users\xxxx\Documents\Test\2input\");
+                //string file = "./ubuntu1804-pytorch.tar";
+                //string EncryptFileName = "./ubuntu1804-pytorch";
                 int j = 1;
-                // foreach (string file in files)
-                // {
-                // Method 1. Binary To Hex
-                FileStream fs = new FileStream(file, FileMode.Open);
-                int hexIn;
-                StringBuilder hex = new StringBuilder();
-                using(var writer = File.CreateText(EncryptFileName)){
-                    for (int i = 0; (hexIn = fs.ReadByte()) != -1; i++){
-                        writer.Write(string.Format("{0:X2}", hexIn));
+                foreach (string file in files)
+                {
+                    // Method 1. Binary To Hex
+                    FileStream fs = new FileStream(file, FileMode.Open);
+                    int hexIn;
+                    StringBuilder hex = new StringBuilder();
+
+                
+                    for (int i = 0; (hexIn = fs.ReadByte()) != -1; i++)
+                    {
+                        hex.Append(string.Format("{0:X2}", hexIn));
                     }
+                    File.AppendAllText(file.replace("2input","16input") , hex.ToString());
                 }
-                // Method 2. Binary To Hex
-                // for (int i = 0; (hexIn = fs.ReadByte()) != -1; i++)
-                // {
-                //     hex.Append(string.Format("{0:X2}", hexIn));
-                // }
-                // File.AppendAllText("./" + EncryptFileName , hex.ToString());
-            
                 // Method 1. Hex To Binary
             
       }
