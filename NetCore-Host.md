@@ -1,6 +1,7 @@
 # 一般主機
 
 Main.cs  
+
     static void Main(string[] args)
     {
             var host = CreateHostBuilder(args).Build();
