@@ -2,16 +2,18 @@
 
 > https://blog.poychang.net/vue-cli-with-dotnet-core-api/
 
-# .Net Core新增Web api專案
-
-    dotnet new webapi -o "TestAPI"
-    
-    
 # 透過Vue-Cli新建專案至.Net Core專案
 
-npm安裝vue-cli
+### .Net Core新增Web api專案
+
+    dotnet new webapi -o "TestAPI"
+
+### npm安裝vue-cli
 
     npm install -g @vue/cli
+
+
+### Vue-cli build
 
 到剛建的net core 專案中
 
