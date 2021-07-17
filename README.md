@@ -8,11 +8,6 @@
 
     dotnet new webapi -o "TestAPI"
 
-### npm安裝vue-cli
-
-    npm install -g @vue/cli
-
-
 ### Vue-cli build
 
 到剛建的net core 專案中
@@ -30,4 +25,18 @@
     
     npm run build
     
-# 
+# .Net Core編譯問題
+
+在.Net Core編譯時會掃描整個目錄資料夾，如果當中有node_modules,bower_components這種資料夾  
+會導致編譯時間過久，因此需在xxxxx.csproj檔案中設定排除的資料夾  
+
+    <Project Sdk="Microsoft.NET.Sdk.Web">
+
+        <PropertyGroup>
+            <TargetFramework>netcoreapp3.1</TargetFramework>
+            <RootNamespace>xxxxxx</RootNamespace>
+            <DefaultItemExcludes>ClientApp\**;$(DefaultItemExcludes)</DefaultItemExcludes>
+        </PropertyGroup>
+     </Project>
+
+
