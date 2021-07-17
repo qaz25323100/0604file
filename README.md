@@ -27,8 +27,8 @@
     
 # .Net Core編譯問題
 
-在.Net Core編譯時會掃描整個目錄資料夾，如果當中有node_modules,bower_components這種資料夾  
-會導致編譯時間過久，因此需在xxxxx.csproj檔案中設定排除的資料夾  
+.Net Core編譯時會掃描整個專案目錄，如果當中有node_modules,bower_components這種資料夾，會導致編譯時間過久  
+因此需在xxxxx.csproj檔案中設定排除的資料夾  
 
     <Project Sdk="Microsoft.NET.Sdk.Web">
 
