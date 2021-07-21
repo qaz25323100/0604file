@@ -1,5 +1,17 @@
-# Docker
+# Docker  
 
+    docker run -it -v D: centos:centos7.1.1503 /bin/bash
+  
+# 設定 repository  
+  
+    centos:~ # vi /etc/yum.repos.d/mongodb-org.repo
+    [mongodb-org]
+    baseurl = https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.2/x86_64/
+    gpgcheck = 1
+    gpgkey = https://www.mongodb.org/static/pgp/server-3.2.asc
+    name = mongodb-org
+  
+centos:~ # yum install --downloadonly --downloaddir=/opt/paks mongodb-org
 
 ## Problem
 
