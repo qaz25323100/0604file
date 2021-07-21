@@ -1,6 +1,6 @@
 # Docker  
 
-    docker run -it -v centos:centos7.1.1503 /bin/bash
+    docker run -it centos:centos7.1.1503 /bin/bash
   
 # 設定 repository  
   
