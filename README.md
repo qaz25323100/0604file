@@ -40,3 +40,6 @@
      </Project>
 
 
+
+# LeetCode EASY
+13,14,20
