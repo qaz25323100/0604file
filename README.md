@@ -43,3 +43,9 @@
 
 # LeetCode EASY
 13,14,20,21,35
+
+# Nuget paks
+
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 3.1.17
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 5.0.0
+dotnet add package SMBLibrary --version 1.4.6.1
