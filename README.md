@@ -52,7 +52,8 @@ dotnet add package SMBLibrary --version 1.4.6.1
 
 
 # setting
-public void ConfigureServices(IServiceCollection services)
+
+        public void ConfigureServices(IServiceCollection services)
         {
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             //services.AddControllersWithViews();
