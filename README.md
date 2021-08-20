@@ -109,3 +109,5 @@ dotnet add package SMBLibrary --version 1.4.6.1
         }
 # BootstrapVue
 https://ithelp.ithome.com.tw/users/20129819/ironman/3311
+
+https://www.ma-no.org/en/programming/javascript/starting-with-bootstrap-vue-step-by-step
