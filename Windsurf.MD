@@ -1,5 +1,4 @@
-＃ Thought Process
-
+# Thought Process
 
 Let me search for the handleOnDragStart function in the codebase to understand how it works with different node types.
 
