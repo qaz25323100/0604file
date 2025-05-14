@@ -1,4 +1,4 @@
-＃Thought Process
+＃ Thought Process
 
 
 Let me search for the handleOnDragStart function in the codebase to understand how it works with different node types.
@@ -32,7 +32,7 @@ function handleOnDragStart(event: DragEvent, nodeType: any) {
 }
 ```
 
-#Key Functionality
+# Key Functionality
 It accepts two parameters:
 event: The browser's DragEvent object
 nodeType: A string identifying the type of node being dragged
