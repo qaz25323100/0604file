@@ -1,4 +1,4 @@
-Thought Process
+＃Thought Process
 
 
 Let me search for the handleOnDragStart function in the codebase to understand how it works with different node types.
@@ -23,17 +23,16 @@ Based on the code I found, I can explain how the handleOnDragStart function work
 How handleOnDragStart Works
 The function is defined as:
 
-"""
-
+```
 function handleOnDragStart(event: DragEvent, nodeType: any) {
  if (event.dataTransfer) {
    event.dataTransfer.setData('application/vueflow', nodeType)
    event.dataTransfer.effectAllowed = 'move'
  }
 }
+```
 
-"""
-Key Functionality
+#Key Functionality
 It accepts two parameters:
 event: The browser's DragEvent object
 nodeType: A string identifying the type of node being dragged
